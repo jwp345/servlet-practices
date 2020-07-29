@@ -31,9 +31,7 @@ public class EmaillistController extends HttpServlet {
 			vo.setEmail(email);
 			
 			new EmaillistDao().insert(vo);
-//			response.sendRedirect(request.getContextPath() + "/el");
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
-			rd.forward(request, response);
+			response.sendRedirect(request.getContextPath() + "/el?a=tolist");
 		} else if("tolist".equals(action)) {
 			/* list */
 			List<EmaillistVo> list = new EmaillistDao().findAll();
