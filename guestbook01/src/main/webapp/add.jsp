@@ -19,8 +19,6 @@
 	vo.setDate(Date.valueOf(date));
 	
 	new GuestbookDao().insert(vo);
-	
-	//response.sendRedirect("show.jsp");
 %>
 <!DOCTYPE html>
 <html>
