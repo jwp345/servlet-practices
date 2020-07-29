@@ -12,7 +12,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/emaillist02/el" method="post" >
 	<h1>메일 리스트에 가입되었습니다.</h1>
 	<p>입력한 정보 내역입니다.</p>
 	<!-- 메일정보 리스트 -->
@@ -41,6 +40,5 @@
 		<a href="<%=request.getContextPath() %>/el">추가메일 등록</a>
 	</p>
 	<br>
-	</form>
 </body>
 </html>

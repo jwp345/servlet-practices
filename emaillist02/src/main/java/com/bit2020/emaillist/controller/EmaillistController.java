@@ -34,12 +34,15 @@ public class EmaillistController extends HttpServlet {
 //			response.sendRedirect(request.getContextPath() + "/el");
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
 			rd.forward(request, response);
-		}
-		else {
+		} else if("tolist".equals(action)) {
 			/* list */
 			List<EmaillistVo> list = new EmaillistDao().findAll();
 			
 			request.setAttribute("list", list);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+			rd.forward(request, response);
+		}
+		else {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
 			rd.forward(request, response);
 		}
